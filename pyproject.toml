@@ -1,0 +1,23 @@
+[project]
+name = "mcdecent"
+version = "0.1.0"
+description = "去中心化 Minecraft 命令行启动器：内容寻址 + P2P + 多镜像"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+mcdecent = "mcdecent.cli:main"
+mcdecent-gui = "mcdecent.gui:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mcdecent", "mcdecent.commands"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "network: 需要访问互联网的测试",
+]

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# PyInstaller 构建产物
+build/
+dist/
+*.spec
+
+# 本地运行数据 / 临时文件
+*.log
+_*
+.hmcl/
+cover.local.json
+*.local.json
+
+# Windows
+Thumbs.db
+desktop.ini
