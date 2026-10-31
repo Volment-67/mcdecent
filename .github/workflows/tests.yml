@@ -6,7 +6,8 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    # 启动器目标平台是 Windows（Win32 API / Tk / PyInstaller），CI 也在 Windows 上跑
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -15,7 +16,7 @@ jobs:
       - name: Install pytest
         run: python -m pip install pytest
       - name: Run tests (offline)
-        # GUI 测试需要桌面/Tk 环境，在本地运行；CI 只跑无界面的核心测试
+        # GUI 测试需要交互桌面，本地运行；CI 只跑无界面的核心测试
         run: python -m pytest -q -m "not network" --ignore=tests/test_gui.py
         env:
-          MCDECENT_HOME: /tmp/mcdecent-ci
+          MCDECENT_HOME: ${{ runner.temp }}\mcdecent-ci
