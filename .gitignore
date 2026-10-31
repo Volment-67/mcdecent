@@ -11,7 +11,6 @@ dist/
 
 # 本地运行数据 / 临时文件
 *.log
-_*
 .hmcl/
 cover.local.json
 *.local.json
