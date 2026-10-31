@@ -1,5 +1,7 @@
 # mcdecent
 
+![tests](https://github.com/Volment-67/mcdecent/actions/workflows/tests.yml/badge.svg)
+
 **去中心化 Minecraft 命令行启动器** —— 内容寻址 + P2P 分发 + 多镜像回退，能装模组、能发整合包、能离线复用。
 
 只用 Python 标准库（3.10+），不需要预装 Java：第一次装游戏时会自动获取与版本匹配的官方 Java 运行时。
